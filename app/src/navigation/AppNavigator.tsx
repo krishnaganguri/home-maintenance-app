@@ -2,12 +2,12 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
 
-import AddApplianceScreen from "../screens/AddApplianceScreen";
-import ApplianceDetailsScreen from "../screens/ApplianceDetailsScreen";
-import ApplianceListScreen from "../screens/ApplianceListScreen";
-import DashboardScreen from "../screens/DashboardScreen";
-import TasksScreen from "../screens/TasksScreen";
-import TaskTimelineScreen from "../screens/TaskTimelineScreen";
+import AddApplianceScreen from "../screens/appliance/AddApplianceScreen";
+import ApplianceDetailsScreen from "../screens/appliance/ApplianceDetailsScreen";
+import ApplianceListScreen from "../screens/appliance/ApplianceListScreen";
+import DashboardScreen from "../screens/home/DashboardScreen";
+import TasksScreen from "../screens/tasks/TasksScreen";
+import TaskTimelineScreen from "../screens/tasks/TaskTimelineScreen";
 
 const Stack = createNativeStackNavigator();
 

@@ -8,10 +8,20 @@ export default function AppCard({ children, style }: any) {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.card,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 16,
+  backgroundColor: colors.card,
+  borderRadius: 16,
+  borderWidth: 1,
+  borderColor: colors.border,
+  padding: 16,
+
+  shadowColor: "#000",
+  shadowOpacity: 0.05,
+  shadowRadius: 8,
+  shadowOffset: {
+    width: 0,
+    height: 2,
   },
+
+  elevation: 2,
+},
 });

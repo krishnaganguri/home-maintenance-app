@@ -2,8 +2,8 @@ import { useFocusEffect } from "@react-navigation/native";
 import React, { useCallback, useState } from "react";
 import { SectionList, StyleSheet, Text, View } from "react-native";
 
-import storageService from "../services/storageService";
-import timelineUtils from "../utils/timelineUtils";
+import storageService from "../../services/storageService";
+import timelineUtils from "../../utils/timelineUtils";
 
 export default function TaskTimelineScreen() {
   const [sections, setSections] = useState<any[]>([]);

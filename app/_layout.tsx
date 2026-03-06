@@ -1,7 +1,12 @@
 import React from "react";
-import AppNavigator from "./src/navigation/AppNavigator";
+import { AppProvider } from "./src/context/AppContext";
+import RootNavigator from "./src/navigation/RootNavigator";
 
 export default function RootLayout() {
-  return <AppNavigator />;
+  return (
+    <AppProvider>
+      <RootNavigator />
+    </AppProvider>
+  );
 }
 

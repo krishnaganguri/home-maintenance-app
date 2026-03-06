@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
-import storageService from "../services/storageService";
+import storageService from "../../services/storageService";
 
 export default function ApplianceDetailsScreen({ route }: any) {
   const { appliance } = route.params;
@@ -22,25 +22,30 @@ export default function ApplianceDetailsScreen({ route }: any) {
     setTasks(applianceTasks);
   };
 
-  return (
+  const renderHeader = () => (
     <View style={styles.container}>
       <Text style={styles.title}>{appliance.name}</Text>
       <Text>{appliance.brand}</Text>
       <Text>{appliance.model}</Text>
 
       <Text style={styles.section}>Maintenance Tasks</Text>
-
-      <FlatList
-        data={tasks}
-        keyExtractor={(item: any) => item.id.toString()}
-        renderItem={({ item }) => (
-          <View style={styles.taskCard}>
-            <Text style={styles.task}>{item.taskName}</Text>
-            <Text>Due: {new Date(item.dueDate).toDateString()}</Text>
-          </View>
-        )}
-      />
     </View>
+  );
+
+  return (
+    <FlatList
+      ListHeaderComponent={renderHeader}
+      style={styles.container}
+      data={tasks}
+      keyExtractor={(item: any) => item.id.toString()}
+      contentContainerStyle={{ paddingBottom: 120 }}
+      renderItem={({ item }) => (
+        <View style={styles.taskCard}>
+          <Text style={styles.task}>{item.taskName}</Text>
+          <Text>Due: {new Date(item.dueDate).toDateString()}</Text>
+        </View>
+      )}
+    />
   );
 }
 

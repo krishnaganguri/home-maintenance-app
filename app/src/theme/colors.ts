@@ -1,16 +1,17 @@
 export const colors = {
-  bg: "#07110B",
-  card: "#101A14",
-  border: "#1B2A20",
+  bg: "#F5F7F5",
+  card: "#FFFFFF",
+  border: "#E2E8E5",
 
-  primary: "#46E57B",
-  primarySoft: "#163823",
+  primary: "#2E9E5B",
+  primarySoft: "#E7F6ED",
 
-  danger: "#E85D5D",
-  warning: "#F4A340",
+  danger: "#D9534F",
+  warning: "#D98B1F",
 
-  text: "#FFFFFF",
-  subText: "#8CA094",
+  text: "#1A2E1D",
+  subText: "#6B7280",
+  secondaryText: "#F5F7F5",
 
-  tabInactive: "#617164",
+  tabInactive: "#94A3B8",
 };

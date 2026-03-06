@@ -2,8 +2,8 @@ import { useFocusEffect } from "@react-navigation/native";
 import React, { useCallback, useState } from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 
-import ApplianceCard from "../components/ApplianceCard";
-import storageService from "../services/storageService";
+import ApplianceCard from "../../components/ApplianceCard";
+import storageService from "../../services/storageService";
 
 export default function ApplianceListScreen({ navigation }: any) {
   const [appliances, setAppliances] = useState([]);
