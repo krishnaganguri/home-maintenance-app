@@ -1,12 +1,25 @@
 import React from "react";
-import { AppProvider } from "./src/context/AppContext";
-import RootNavigator from "./src/navigation/RootNavigator";
+import { AppProvider } from "../src/context/AppContext";
+import { ErrorProvider } from "../src/context/ErrorContext";
+import { LoadingProvider } from "../src/context/LoadingContext";
 
-export default function RootLayout() {
+import ErrorBanner from "../src/components/ErrorBanner";
+import LoadingOverlay from "../src/components/LoadingOverlay";
+
+import RootNavigator from "../src/navigation/RootNavigator";
+
+
+export default function Layout() {
   return (
-    <AppProvider>
-      <RootNavigator />
-    </AppProvider>
+    <ErrorProvider>
+      <LoadingProvider>
+        <AppProvider>
+          <ErrorBanner />
+          <LoadingOverlay />
+          <RootNavigator />
+        </AppProvider>
+      </LoadingProvider>
+    </ErrorProvider>
   );
 }
 
